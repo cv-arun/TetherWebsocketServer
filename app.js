@@ -34,7 +34,7 @@ app.use('/', (req, res) => {
 })
 
 
-const PORT = 80
+const PORT = 4000
 server.listen(PORT, () =>
   console.log(` app listening on port ${PORT}!`),
 );
