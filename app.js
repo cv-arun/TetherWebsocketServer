@@ -18,16 +18,8 @@ app.use(logger('dev'));
 
 const io = new Server(server, {
   cors: {
-    origin: ["*"],
-    handlePreflightRequest:(req,res)=>{
-      res.writeHead(200,{
-        "Access-Control-Allow-Origin":"*",
-        "Access-Control-Allow-Methods":"GET,POST",
-        "Access-Control-Allow-Headers":"my-custom-header",
-        "Access-Control-Allow-Credentials":true
-      });
-      res.end();
-    }
+    origin: "http://localhost:3000",
+    methods: ["GET", "POST"],
   },
 });
 
