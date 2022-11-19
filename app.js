@@ -30,7 +30,7 @@ io.on('connection', (socket) => {
 app.use('/', (req, res) => {
   console.log('call reached')
 
-  res.json({ msg: 'call reached' })
+  res.send('running')
 })
 
 

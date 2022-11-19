@@ -1,7 +1,7 @@
 const axios=require('axios')
 
  const instance = axios.create({
-    baseURL: 'http://localhost:5000/chat',
+    baseURL: 'https://tetherapi.cyclic.app/chat',
   });
 
   module.exports=instance
