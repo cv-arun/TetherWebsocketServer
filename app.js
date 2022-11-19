@@ -18,7 +18,7 @@ app.use(logger('dev'));
 
 const io = new Server(server, {
   cors: {
-    origin: ["https://stunning-jelly-c10035.netlify.app",null,undefined],
+    origin: ["*"],
     methods: ["GET", "POST"],
   },
 });
