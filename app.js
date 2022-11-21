@@ -18,7 +18,7 @@ app.use(logger('dev'));
 
 const io = new Server(server, {
   cors: {
-    origin: "*",
+    origin: "https://t-ether.click/chat",
     methods: ["GET", "POST"],
   },
 });
