@@ -34,6 +34,9 @@ const socketServer = (socket) => {
 
 
     socket.on("disconnect", () => {
+        axios.post('/registerOfflineBysocketId', { socketId: socket.id }).
+            then(data => console.log('ofline'))
+            .catch(err => console.log(err))
         console.log("User Disconnected", socket.id);
     });
 }
