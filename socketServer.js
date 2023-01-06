@@ -27,12 +27,7 @@ const socketServer = (socket) => {
     socket.on('offline', (data) => {
         console.log(data, 'offline')
 
-        data.userId !== '' && axios.post('/registerOffline', { userId: data.userId }, {
-            headers: {
-                Origin: 'http://localhost:4000',
-                Referer: 'http://localhost:4000/'
-            }
-        }).
+        data.userId !== '' && axios.post('/registerOffline', { userId: data.userId }).
             then(data => console.log('ofline'))
             .catch(err => console.log(err))
     })

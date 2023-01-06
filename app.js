@@ -27,6 +27,7 @@ io.on('connection', (socket) => {
   console.log('io connected')
   socketServer(socket)
 })
+
 app.use('/', (req, res) => {
   console.log('call reached')
 
